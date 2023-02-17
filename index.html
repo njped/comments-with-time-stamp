@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 30vh auto;
+            border: 3px solid black;
+            padding: 20px;
+            width: 40%;
+        }
+
+        #username, #commentText, button, h2, label, select {
+            margin: 10px;
+        }
+
+        #username, button {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <label>Order The Comments:</label>
+        <select>
+            <option value="">--Please Choose Filter--</option>
+            <option value="filter-by-timestamp">Order by Timestamp</option>
+            <option value="filter-by-username">Order by Username</option>
+        </select>
+        <h2>Comment Down Below</h2>
+        <input type="text" name="username" id="username" placeholder="Username">
+        <textarea name="comments" onfocus="value=''" id="commentText" cols="30" rows="10" placeholder="Comment Here"></textarea>
+        <button class="submitBtn">Submit Comment</button>
+        <section>
+            <ul class="comments"></ul>
+        </section>
+    </div>
+</body>
+</html>
